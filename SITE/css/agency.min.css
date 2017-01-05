@@ -189,7 +189,7 @@ background-color:#fec503}
 
 header
 {
-	background-image:url(../img/fd1.jpg);
+	background-image:url(../img/background.jpg);
 	background-repeat:no-repeat;
 	background-attachment:scroll;
 	background-position:center center;
@@ -309,7 +309,7 @@ margin:0 auto}
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover
 {
-opacity:1}
+opacity:0.8}
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content
 {
@@ -318,7 +318,7 @@ opacity:1}
 	height:20px;
 	font-size:20px;
 	text-align:center;
-	top:30%;
+	top:35%;
 	margin-top:-12px;
 color:#fff}
 
