@@ -187,6 +187,14 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
     outline: none;
 }
+
+.navbar-custom .nav .dropdown li a:hover,
+.navbar-custom .nav .dropdown li a:focus {
+    color: white;
+    outline: none;
+    background-color: #fed136;
+}
+
 .navbar-custom .navbar-nav > .active > a {
     border-radius: 0;
     color: white;
@@ -201,6 +209,33 @@ fieldset[disabled] .btn-xl.active {
     background-color: #222222;
 }
 
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #fed136;
+    background-color: #222222;
+}
+
+.navbar-default .navbar-nav .dropdown>.open>a, .navbar-default .navbar-nav .dropdown>.open>a:focus, .navbar-default .navbar-nav .dropdown>.open>a:hover {
+    color:none;
+}
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: -1px;
+    margin-right: -1px;
+}
 
 @media (min-width: 768px) {
     .navbar-custom {
@@ -212,7 +247,7 @@ fieldset[disabled] .btn-xl.active {
         border: none;
     }
     .navbar-custom .navbar-brand {
-        font-size: 2em;
+        font-size: 25px;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
         transition: all 0.3s;
@@ -228,7 +263,7 @@ fieldset[disabled] .btn-xl.active {
 @media (min-width: 768px) {
     .navbar-custom.affix {
         background-color: #222222;
-        padding: 10px 0;
+        padding: 0px 0;
     }
     .navbar-custom.affix .navbar-brand {
         font-size: 1.5em;
