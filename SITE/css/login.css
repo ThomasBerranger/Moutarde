@@ -9,6 +9,7 @@ body {
 .navbar-custom {
     background-color: #eeeeee;
     border-color: transparent;
+    padding: 0px;
 }
 
 .navbar .dropdown ul{
@@ -43,11 +44,11 @@ button {
     border: none;
     color: #FFF;
     font-size: 12px;
-    margin-bottom: 5%;
 }
 
-@media (min-width: 768px) {
-    .navbar-custom {
-        padding: 0;
-    }
+.mdp {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
 }
+
