@@ -6,6 +6,20 @@ body {
     color:black;
 }
 
+.navbar-custom {
+    background-color: #eeeeee;
+    border-color: transparent;
+}
+
+.navbar .dropdown ul{
+    background-color: #eeeeee;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #fed136;
+    background-color: #eeeeee;
+}
+
 .connexion {
     margin-bottom: 5%;
 }
@@ -32,3 +46,8 @@ button {
     margin-bottom: 5%;
 }
 
+@media (min-width: 768px) {
+    .navbar-custom {
+        padding: 0;
+    }
+}
