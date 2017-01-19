@@ -22,7 +22,9 @@ body {
 }
 
 .connexion {
-    margin-bottom: 5%;
+    margin-top:2em;
+    margin-bottom: 2em;
+    padding:0px;
 }
 
 .formulaire {
@@ -44,6 +46,10 @@ button {
     border: none;
     color: #FFF;
     font-size: 12px;
+}
+
+button:hover {
+    background-color: #fec503;
 }
 
 .mdp {
