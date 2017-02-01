@@ -406,6 +406,7 @@ section h3.section-subheading {
 #circuits * {
     z-index: 2;
 }
+.circuits-modal 
 @media (min-width: 767px) {
     #circuits .circuits-item {
         margin: 0 0 30px;
