@@ -280,6 +280,7 @@ header {
     -o-background-size: cover;
     text-align: center;
     color: white;
+
 }
 header .intro-text {
     padding-top: 100px;
@@ -299,6 +300,12 @@ header .intro-text .intro-heading {
     font-size: 50px;
     line-height: 50px;
     margin-bottom: 25px;
+}
+
+@media (min-width: 767px) {
+    header {
+        height: 100vh;
+    }
 }
 @media (min-width: 768px) {
     header .intro-text {
@@ -337,6 +344,14 @@ section h3.section-subheading {
     font-weight: 400;
     margin-bottom: 75px;
 }
+
+.question {
+    padding:45px;
+    margin: 50px 0;
+    border-radius: 15px;
+    background-color:rgba(254, 209, 54, 0.1);
+}
+
 @media (min-width: 768px) {
     section {
         padding: 150px 0;
