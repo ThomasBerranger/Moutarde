@@ -1,0 +1,42 @@
+body{font-family:Century Gothic;}
+
+.year{  color:#c0392b;  font-size:85px; text-align: center;}
+
+.relative{  position:relative;}
+
+.month{  margin-top:12px;}
+.months {  list-style:none;  margin:0px;  padding:0px;}
+.months a{padding:0px 15px 0px 0px;  color:#888888;  text-decoration:none;  font-size:40px; text-transform:uppercase;}
+.months a:hover, .months a.active{text-decoration: none; color:#c0392b;}
+
+.mois {text-align: center;}
+
+table{border-collapse:collapse;}
+table td{  border:1px solid #A3A3A3; width:80px;  height:80px;}
+table td.today{  border:2px solid #D90000;  width:80px;  height:80px;}
+table td:hover{  background:#DFDFDF;  cursor:pointer;}
+table td.padding{  border:none; cursor: not-allowed; background-color: white;}
+table th{ color:#c0392b;  font-weight:bold; text-align: center;}
+
+table td .day{  position:absolute;  color:black;  bottom:-40px;  right:5px;  font-weight:bold;  font-size:22pt;}
+
+table td .events{ position:relative;  width:79px;  height:0px;  margin:-39px 0px 0px;  padding:0px;}
+table td .events div{ width:10px;  height:10px;  float:left;  background:black; border-radius: 10px; margin-left:5px; margin-top:5px; text-indent:-3000px;}
+
+table td:hover .events{  position:absolute;  left:582px;  top:70px;  width:442px;  list-style:none;  margin:0px;  padding:11px 0px 0px; color: #2980b9;}
+table td:hover .events div{ display: block; height:auto;  line-height:40px;  font-weight:bold;  border-bottom:1px solid #D6D6D6;  padding-left:41px;  text-indent:0;  background:none;  width:500px;}
+table td:hover .events div:first-child{ display: block; border-top:1px solid #D6D6D6;}
+
+table td .daytitle{  display:none;}
+table td:hover .daytitle{  position:absolute;  left:582px;  top:21px;  width:500px;  list-style:none;  margin:0px 0px 0px 16px;  padding:0px;  color: #c0392b;  font-size:41px;  display:block;  font-weight:bold;}
+
+
+.hr1{
+    height: 2px;
+    margin: 50px 200px  30px  200px;
+}
+
+
+table td .events div2{ display: none;}
+table td:hover .events div2{ display: block; height:auto;  line-height:40px;  font-weight:bold;  border-bottom:1px solid #D6D6D6;  padding-left:41px;  text-indent:0;  background:none;  width:500px;}
+table td:hover .events div2:first-child{ display: block; border-top:1px solid #D6D6D6;}
