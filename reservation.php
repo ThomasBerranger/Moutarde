@@ -18,6 +18,7 @@ if(isset($_SESSION['id']))
         $date = date($_POST['date']);
         $duree = intval($_POST['duree']);
         $num_res = intval($_POST['num_res']);
+        $verif_unique = intval($_POST['verif_unique']);
         $nb_personne = intval($_POST['nb_personne']);
         $niveau = htmlspecialchars($_POST['niveau']);
         $nom = htmlspecialchars($_POST['nom']);
@@ -38,9 +39,10 @@ if(isset($_SESSION['id']))
                     {
                     $i=0;
                     while ($i!=$duree) {
-                      $insertbretagne_nord_reservation = $bdd->prepare("INSERT INTO `bretagne_nord_reservation` (`id`, `date`, `duree`, `nb_personne`, `niveau`, `nom`, `mail`, `num_res`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?);");
-                      $insertbretagne_nord_reservation->execute(array($date, $duree, $nb_personne, $niveau, $nom, $mailres, $num_res));
+                      $insertbretagne_nord_reservation = $bdd->prepare("INSERT INTO `bretagne_nord_reservation` (`id`, `date`, `duree`, `nb_personne`, `niveau`, `nom`, `mail`, `num_res`, `verif_unique`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?);");
+                      $insertbretagne_nord_reservation->execute(array($date, $duree, $nb_personne, $niveau, $nom, $mailres, $num_res, $verif_unique));
                       $i++;
+                      $verif_unique++;
                       $date = date('Y-m-d', strtotime("$date +1 day"));
                       $erreur = "GG";
                     }
@@ -99,6 +101,7 @@ if(isset($_SESSION['id']))
             <br>
             <?php
             $numero_reservation = 1;
+            $verif_unique = 1;
             while($donnees = $reservations->fetch())
             {
               ?>
@@ -110,9 +113,13 @@ if(isset($_SESSION['id']))
                 " et dure ", $donnees['duree'], " jour(s) | ",
                 "Nombre de personnes : " ,$donnees['nb_personne'], " | ",
                 "Mail : " ,$donnees['mail'], " | ",
-                "Niveau : ", $donnees['niveau'];
+                "Niveau : ", $donnees['niveau'],
+                " ||| Verification de l'unicité : ", $donnees['verif_unique'];
                 if ($numero_reservation == $donnees['num_res']) {
                   $numero_reservation ++;
+                }
+                if ($verif_unique == $donnees['verif_unique']) {
+                  $verif_unique ++;
                 }
                 ?></h2></div>
             <?php
@@ -196,6 +203,16 @@ if(isset($_SESSION['id']))
                         <input type="number" value="<?php echo $numero_reservation; ?>" name="num_res" readonly>
                     </td>
                 </tr>
+
+                <tr  style="display:none;">
+                    <td align="right">
+                        <label for="verif_unique">Verification de l'unicitée :</label>
+                    </td>
+                    <td>
+                        <input type="number" value="<?php echo $verif_unique; ?>" name="verif_unique" readonly>
+                    </td>
+                </tr>
+
 
                 <tr>
                     <td></td>

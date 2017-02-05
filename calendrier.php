@@ -60,7 +60,7 @@ $date = new Date();
 $year = date('Y');
 $dates = $date->getAll($year);
 $nom = $date->getNom($year);
-$num_reservation = $date->getNum_res($year);
+$verif_unique = $date->getVerif_unique($year);
 $nb_personne = $date->getNb_personne($year);
 ?>
 
@@ -105,13 +105,13 @@ $nb_personne = $date->getNb_personne($year);
                         <td
                           <?php if($time == strtotime(date('Y-m-d'))): ?> class="today" <?php endif; // Met en évidence quel jours somme nous
                           $verif_nb_personne = 0;
-                          if (isset($num_reservation[$time])) //Grosse boucle permettant d'afficher une couleur en fonction du nombre de personne inscrites
+                          if (isset($verif_unique[$time])) //Grosse boucle permettant d'afficher une couleur en fonction du nombre de personne inscrites
                           {
-                          foreach ($num_reservation[$time] as $e):
+                          foreach ($verif_unique[$time] as $e):
                           reset($reservation_bretagne_nord);
                           $reservation_bretagne_nord = $bdd->query("SELECT * FROM bretagne_nord_reservation");
                           while ($donnees = $reservation_bretagne_nord->fetch()) {
-                            if ($e == $donnees['num_res']): ?>
+                            if ($e == $donnees['verif_unique']): ?>
                               <?php $verif_nb_personne = $verif_nb_personne + $donnees['nb_personne'];
                           endif;
                           }
@@ -129,13 +129,13 @@ $nb_personne = $date->getNb_personne($year);
                           </div>
 
                           <ul class="events">
-                            <?php if (isset($num_reservation[$time]))
+                            <?php if (isset($verif_unique[$time]))
                             {
-                            foreach ($num_reservation[$time] as $e):
+                            foreach ($verif_unique[$time] as $e):
                             reset($reservation_bretagne_nord);
                             $reservation_bretagne_nord = $bdd->query("SELECT * FROM bretagne_nord_reservation");
                             while ($donnees = $reservation_bretagne_nord->fetch()) {
-                              if ($e == $donnees['num_res']): ?>
+                              if ($e == $donnees['verif_unique']): ?>
                                 <div><?php echo "Reservation N° ", $donnees['num_res'], " : M/Mme : ",$donnees['nom'],", mail : ",$donnees['mail'], ", groupe de ", $donnees['nb_personne'], " personnes ", $donnees['niveau'],", pendant : ", $donnees{'duree'}, " jours.";?></div>
                               <?php endif;
                             }
@@ -207,13 +207,13 @@ $nb_personne = $date->getNb_personne($year);
                         <?php if($time == strtotime(date('Y-m-d'))): ?> class="today" <?php endif;
 
                           $verif_nb_personne = 0;
-                          if (isset($num_reservation[$time]))
+                          if (isset($verif_unique[$time]))
                           {
-                          foreach ($num_reservation[$time] as $e):
+                          foreach ($verif_unique[$time] as $e):
                           reset($reservation_bretagne_nord);
                           $reservation_bretagne_nord = $bdd->query("SELECT * FROM bretagne_nord_reservation");
                           while ($donnees = $reservation_bretagne_nord->fetch()) {
-                            if ($e == $donnees['num_res']): ?>
+                            if ($e == $donnees['verif_unique']): ?>
                               <?php $verif_nb_personne = $verif_nb_personne + $donnees['nb_personne'];
                           endif;
                           }

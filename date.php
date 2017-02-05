@@ -15,15 +15,15 @@ class Date{
         return $nom;
     }
 
-    function getNum_res($year){
+    function getVerif_unique($year){
         global $DB;
-        $req = $DB->query('SELECT id,num_res,date FROM bretagne_nord_reservation WHERE YEAR(date)='.$year);
-        $num_res = array();
+        $req = $DB->query('SELECT id,verif_unique,date FROM bretagne_nord_reservation WHERE YEAR(date)='.$year);
+        $verif_unique = array();
         while ($d  = $req->fetch(PDO::FETCH_OBJ))
         {
-            $num_res[strtotime($d->date)][$d->id] = $d->num_res;
+            $verif_unique[strtotime($d->date)][$d->id] = $d->verif_unique;
         }
-        return $num_res;
+        return $verif_unique;
     }
 
     function getNb_personne($year){
