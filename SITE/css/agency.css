@@ -813,3 +813,7 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
+
+.timeline li { /* */ 
+    margin-top:5%;
+}
