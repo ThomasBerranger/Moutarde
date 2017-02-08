@@ -31,7 +31,7 @@ body {
     border: solid 1px #cecece;
 }
 
-.formulaire .input {
+.formulaire .form-group {
     width:80%;
     margin: 5% auto;
 }
@@ -58,3 +58,6 @@ button:hover {
     text-align: center;
 }
 
+.bouton { /* profil */
+    margin-bottom: 5%;
+}
