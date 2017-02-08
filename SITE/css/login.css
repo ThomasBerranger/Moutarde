@@ -2,6 +2,10 @@ body {
     background-color: white;
 }
 
+.body {
+    margin-top: 5%;
+}
+
 .navbar-custom .nav li a {
     color:black;
 }
@@ -60,4 +64,12 @@ button:hover {
 
 .bouton { /* profil */
     margin-bottom: 5%;
+}
+
+.infos {/* profil */
+    margin: 5%;
+}
+
+.infos p {
+    text-align: center;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Mon compte</title>
+        <title>Mon profil</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     <body id="page-top" class="index w3-animate-opacity">
 
         <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-custom">
+        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
@@ -58,9 +58,9 @@
                             <a class="page-scroll" href="index.html#contact">Contact</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color:none">Mon Compte<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color:none">Mon Profil<span class="caret"></span></a>
                             <ul class="dropdown-menu pull-left">
-                                <li><a href="profil.html">Aperçu de mon compte</a></li>
+                                <li><a href="profil.html">Aperçu de mon profil</a></li>
                                 <li><a href="#">Mes commandes</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="login.html">Lien connexion</a></li>
@@ -73,81 +73,74 @@
             <!-- /.container-fluid -->
         </nav>
 
+       <div class="body">
+       
         <div class="row">
             <div class="connexion col-xs-10 col-xs-offset-1">
-                <h3>MON COMPTE</h3>
+                <h3>MON PROFIL</h3>
             </div>
         </div>
 
         <div class="row">
-            <form name="sentMessage" id="contactForm" novalidate >
-                <div class="formulaire col-xs-10 col-xs-offset-1">
-                    <div class="form-group">
-                        <label for="mon_id">Prénom *</label>
-                        <input type="text" class="form-control"  id="name" required data-validation-required-message="S'il vous plaît entrez votre e-mail.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="form-group">
-                        <label for="mon_id">Nom *</label>
-                        <input type="text" class="form-control" id="name" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="form-group">
-                        <label for="mon_id">Identifiant ou adresse e-mail * *</label>
-                        <input type="text" class="form-control" id="password" name="mdp" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="row bouton">
-                        <div id="success"></div>
-                        <button type="submit" class="button col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">Editez votre profil</button>
-                    </div>
+            <div class="formulaire col-xs-10 col-xs-offset-1">
+                <div class="infos">
+                    <p>PRENOM:</p>
+                    <p>NOM:</p>
+                    <p>EMAIL:</p>
                 </div>
+                <div class="clearfix"></div>
+                <div class="row bouton">
+                    <div id="success"></div>
+                    <button onclick="self.location.href='editprofil.html'" class="button col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">Editez votre profil</button>
+                </div>
+            </div>
             </form>
         </div>
 
 
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <span class="copyright">Copyright &copy; FrenchMotorTrip 2016</span>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list-inline quicklinks">
-                            <li><a href="#">Conditions générales</a>
-                            </li>
-                            <li><a href="#">Termes d'usage</a>
-                            </li>
-                        </ul>
-                    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; FrenchMotorTrip 2016</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Conditions générales</a>
+                        </li>
+                        <li><a href="#">Termes d'usage</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
+    
+    </div> <!-- body -->
 
-        <!-- jQuery -->
-        <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
     </body>
 </html>
