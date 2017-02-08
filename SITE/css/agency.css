@@ -246,6 +246,9 @@ fieldset[disabled] .btn-xl.active {
         transition: padding 0.3s;
         border: none;
     }
+    .navbar-custom ul li a {
+        color: #222222;
+    }
     .navbar-custom .navbar-brand {
         font-size: 25px;
         -webkit-transition: all 0.3s;
@@ -267,6 +270,12 @@ fieldset[disabled] .btn-xl.active {
     }
     .navbar-custom.affix .navbar-brand {
         font-size: 1.5em;
+    }
+}
+
+@media (max-width: 767px) {
+    .dropdown .divider{
+    display:none;
     }
 }
 header {
@@ -348,7 +357,6 @@ section h3.section-subheading {
 .question {
     padding:45px;
     margin: 50px 0;
-    border-radius: 15px;
     background-color:rgba(254, 209, 54, 0.1);
 }
 

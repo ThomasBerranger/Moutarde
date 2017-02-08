@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Connexion</title>
+        <title>Inscription</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,20 +75,35 @@
 
         <div class="row">
             <div class="connexion col-xs-10 col-xs-offset-1">
-                <h3>CONNEXION</h3>
+                <h3>INSCRIPTION</h3>
             </div>
         </div>
 
         <div class="row">
             <div class="formulaire col-xs-10 col-xs-offset-1">
+               <div class="input">
+                    <label for="mon_id">Prénom *</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="input">
+                    <label for="mon_id">Nom *</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
+                    <p class="help-block text-danger"></p>
+                </div>
                 <div class="input">
                     <label for="mon_id">Identifiant ou adresse e-mail *</label>
-                    <input type="text" class="form-control"  id="name" required data-validation-required-message="S'il vous plaît entrez votre e-mail.">
+                    <input type="text" class="form-control"  id="mail" name="mail" required data-validation-required-message="S'il vous plaît entrez votre e-mail.">
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="input">
                     <label for="mon_id">Mot de passe *</label>
-                    <input type="text" class="form-control" id="name" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
+                    <input type="text" class="form-control" id="password" name="mdp" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="input">
+                    <label for="mon_id">Confirmation de mot de passe *</label>
+                    <input type="text" class="form-control" id="password" name="mdp2" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
                     <p class="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
@@ -96,8 +111,8 @@
                     <button type="submit" class="button col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">Connexion</button>
                 </div>
                 <div class="row">
-                    <div class="mdp col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
-                        <a href="signup.html">Pas encore membre ?<br> Créez un compte</a>
+                    <div class="mdp col-xs-6 col-xs-offset-3">
+                        <a href="login.html">Déjà membre ?<br> Connectez vous</a>
                     </div>    <!-- mdp -->
                 </div>
             </div>
