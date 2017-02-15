@@ -36,13 +36,15 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         if($userinfo['id'] == $_SESSION['id'])
         {
         ?>
-        <a href="edit_profil.php">Editer son profil</a>
+        <a href="edit_profil.php">Editer son profil</a><a> | </a>
+        <a href="calendrier.php">Calendrier</a><a> | </a>
         <a href="deconnexion.php">Se déconnecter</a>
         <?php
         }
         ?>
 
     </div>
+
     </body>
     </html>
 
