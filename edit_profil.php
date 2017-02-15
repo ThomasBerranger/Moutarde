@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=ydays_membre', 'root', '');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=ydays_membre', 'root', 'root');
 
 if(isset($_SESSION['id']))
 {
@@ -23,11 +23,31 @@ if(isset($_SESSION['id']))
 
                 if (isset($_POST['newmail']) and !empty($_POST['newmail']))
                 {
+                    $mail = htmlspecialchars($_POST['mail']);
+                    if(filter_var($mail, FILTER_VALIDATE_EMAIL))
+            {
+
+                $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
+                $reqmail->execute(array($mail));
+                $mailexist = $reqmail->rowCount();
+
+                if($mailexist==0)
+                {
                     $newmail = htmlspecialchars($_POST['newmail']);
                     $insertmail = $bdd->prepare("UPDATE membres SET mail = ? WHERE id = ?");
                     $insertmail->execute(array($newmail, $_SESSION['id']));
                     header("Location: profil.php?id=".$_SESSION['id']);
                 }
+                else
+                {
+                    $erreur ="Cette adresse mail est déjà enregistrée !";
+                }
+            }
+            else
+            {
+                $erreur = "Votre adresse mail n'est pas valide";
+            }
+
 
                 if(isset($_POST['newprenom']) and !empty($_POST['newprenom']))
                 {
