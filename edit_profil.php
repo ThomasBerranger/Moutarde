@@ -33,7 +33,12 @@ if(isset($_SESSION['id']))
                     $reqmail->execute(array($newmail));
                     $mailexist = $reqmail->rowCount();
 
-                    if($mailexist==0)
+                    $verif_mail_actuel = $bdd->prepare("SELECT mail FROM membres WHERE id = ?");
+                    $verif_mail_actuel->execute(array($_SESSION['id']));
+                    $verif_mail_actuel = $verif_mail_actuel->fetch();
+
+
+                    if($mailexist==0 or $newmail==$verif_mail_actuel['mail'])
                     {
 
                         if (isset($_POST['newmail']) and !empty($_POST['newmail']))
