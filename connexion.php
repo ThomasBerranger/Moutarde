@@ -173,7 +173,7 @@ if(isset($_POST['formconnexion']))
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>

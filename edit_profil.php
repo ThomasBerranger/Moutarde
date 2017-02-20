@@ -20,30 +20,54 @@ if(isset($_SESSION['id']))
 
               if($newmdp == $newmdp2)
               {
-                  $insertmdp = $bdd->prepare("UPDATE membres SET mdp = ? WHERE id = ?");
-                  $insertmdp->execute(array($newmdp, $_SESSION['id']));
 
-                  if (isset($_POST['newmail']) and !empty($_POST['newmail']))
-                  {
-                      $newmail = htmlspecialchars($_POST['newmail']);
-                      $insertmail = $bdd->prepare("UPDATE membres SET mail = ? WHERE id = ?");
-                      $insertmail->execute(array($newmail, $_SESSION['id']));
-                  }
+                if (isset($_POST['newmail']) and !empty($_POST['newmail']))
+                {
 
-                  if(isset($_POST['newprenom']) and !empty($_POST['newprenom']))
-                  {
-                      $newprenom = htmlspecialchars($_POST['newprenom']);
-                      $insertprenom = $bdd->prepare("UPDATE membres SET prenom = ? WHERE id = ?");
-                      $insertprenom->execute(array($newprenom, $_SESSION['id']));
-                  }
+                  $newmail = htmlspecialchars($_POST['newmail']);
+                  if(filter_var($newmail, FILTER_VALIDATE_EMAIL))
 
-                  if(isset($_POST['newnom']) and !empty($_POST['newnom']))
-                  {
-                      $newnom = htmlspecialchars($_POST['newnom']);
-                      $insertnom = $bdd->prepare("UPDATE membres SET nom = ? WHERE id = ?");
-                      $insertnom->execute(array($newnom, $_SESSION['id']));
-                      $erreur = "Votre compte a bien été modifié";
-                  }
+                    {
+
+                    $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
+                    $reqmail->execute(array($newmail));
+                    $mailexist = $reqmail->rowCount();
+
+                    if($mailexist==0)
+                    {
+
+                        if (isset($_POST['newmail']) and !empty($_POST['newmail']))
+                        {
+                            $insertmail = $bdd->prepare("UPDATE membres SET mail = ? WHERE id = ?");
+                            $insertmail->execute(array($newmail, $_SESSION['id']));
+                        }
+
+                        if(isset($_POST['newprenom']) and !empty($_POST['newprenom']))
+                        {
+                            $newprenom = htmlspecialchars($_POST['newprenom']);
+                            $insertprenom = $bdd->prepare("UPDATE membres SET prenom = ? WHERE id = ?");
+                            $insertprenom->execute(array($newprenom, $_SESSION['id']));
+                        }
+
+                        if(isset($_POST['newnom']) and !empty($_POST['newnom']))
+                        {
+                            $newnom = htmlspecialchars($_POST['newnom']);
+                            $insertnom = $bdd->prepare("UPDATE membres SET nom = ? WHERE id = ?");
+                            $insertnom->execute(array($newnom, $_SESSION['id']));
+                            $erreur = "Votre compte a bien été modifié";
+                        }
+                      }
+                      else
+                      {
+                          $erreur ="Cette adresse mail est déjà enregistrée !";
+                      }
+
+                      }
+                }
+                else
+                {
+                    $erreur = "Votre adresse mail n'est pas valide";
+                }
               }
               else
               {
@@ -205,7 +229,7 @@ if(isset($_SESSION['id']))
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
