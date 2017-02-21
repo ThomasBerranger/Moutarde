@@ -142,8 +142,8 @@ if(isset($_POST['forminscription']))
                                 $userinfo = $requser->fetch();
 
                                 ?>
-                                <li><a href="edit_profil.php?id=<?php echo $_SESSION['id'] ?>">Aperçu de mon compte</a></li>
-                                <li><a href="#">Mes commandes</a></li>
+                                <li><a href="edit_profil.php?id=<?php echo $_SESSION['id']?>">Aperçu de mon compte</a></li>
+                                <li><a href="mes_commandes.php?id=<?php echo $_SESSION['id']?>">Mes commandes</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="deconnexion.php">Deconnexion</a></li>
                                 <?php } else { ?>
@@ -375,7 +375,6 @@ if(isset($_POST['forminscription']))
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <h2 class="section-heading">Franche-Comté</h2>
-                            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                         </div>
                     </div>
                     <div class="row">
@@ -383,53 +382,54 @@ if(isset($_POST['forminscription']))
                             <ul class="timeline">
                                 <li>
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                                        <img class="img-circle img-responsive" src="img/Franche-comte/paysage.jpg" alt="">
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="subheading">Quel parcours ?</h4>
+                                            <h4 class="subheading">Présentation</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                            <p class="text-muted">La Franche-Comté charme d’abord par la diversité de ses paysages : forêts à perte de vue, lacs majestueux, grottes et gouffres profonds, rivières impétueuses, cascades impressionnantes. Au nord, la beauté préservée des ballons des Vosges, au centre, la chute magnifique du Saut du Doubs, au sud, l’impressionnant panorama du crêt de Chalam, dans le parc naturel régional du Haut-Jura, ne sont qu’un aperçu des richesses naturelles innombrables de la région.</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="timeline-inverted">
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                                        <img class="img-circle img-responsive" src="img/moto.jpeg" alt="">
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="subheading">Quelle moto ?</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                            <p class="text-muted">Pour votre parcours nous vous proposons une  Suzuki 650 V-STROM ABS (645m3) ou une Ducati Scrambler Classic ABS (803m3) au choix.</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                                        <img class="img-circle img-responsive" src="img/Franche-comte/resto.jpg" alt="">
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="subheading">A propos de l'assurance</h4>
+                                            <h4 class="subheading">Restaurant</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                            <p class="text-muted">La gastronomie fait partie intégrante de la découverte de la région. Elle s'articule autour de produits célèbres: saucisse de Morteau, comté, morbier, vins du Jura renommés comme le vin jaune, le vin de paille.</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="timeline-inverted">
                                     <div class="timeline-image">
-                                        <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                                        <img class="img-circle img-responsive" src="img/Franche-comte/carte.png" alt="">
                                     </div>
-                                    <div class="timeline-panel">
+                                    <div class="timeline-panel parcours">
                                         <div class="timeline-heading">
-                                            <h4 class="subheading">Paiement</h4>
+                                            <h4 class="subheading">Quel parcours ?</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                            <p class="text-muted">
+                                                Nous commencerons dans le Jura où nous pourrons contempler les cascades de la région. Puis nous finirons notre séjour dans le département des Haute-Saône connus pour ses superbes lacs. </p>
                                         </div>
                                     </div>
                                 </li>

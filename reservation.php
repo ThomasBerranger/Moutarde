@@ -118,8 +118,8 @@ if(isset($_SESSION['id']))
                 if ($numero_reservation == $donnees['num_res']) {
                   $numero_reservation ++;
                 }
-                if ($verif_unique == $donnees['verif_unique']) {
-                  $verif_unique ++;
+                if ($verif_unique <= $donnees['verif_unique']) {
+                  $verif_unique = $donnees['verif_unique'] +1;
                 }
                 ?></h2></div>
             <?php
