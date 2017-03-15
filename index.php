@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=ydays_membre', 'root', '');
+
+require('connection.php');
 
 $userinfo = 0;
 
@@ -168,7 +169,7 @@ if(isset($_POST['forminscription']))
                     <div class="intro-lead-in">Bienvenue</div>
                     <div class="intro-heading">French Motor Trip</div>
                     <?php if ($userinfo['prenom'] == 'admin' and $userinfo['nom'] == 'admin' and $userinfo['mail'] == 'admin@gmail.com') {?>
-                    <h1> <a href="calendrier.php">Espace Administrateur</a> </h1>
+                    <h1> <a href="accueil.php?id=<?php echo $_SESSION['id'] ?>">Espace Administrateur</a> </h1>
                     <?php } ?>
                 </div>
             </div>
@@ -196,7 +197,7 @@ if(isset($_POST['forminscription']))
                         </a>
                         <div class="circuits-caption">
                             <h4>Franche-comté</h4>
-                            <p class="text-muted">3000.00 €</p>
+                            <p class="text-muted"></p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 circuits-item">
@@ -210,7 +211,7 @@ if(isset($_POST['forminscription']))
                         </a>
                         <div class="circuits-caption">
                             <h4>Bretagne Nord</h4>
-                            <p class="text-muted">3000.00 €</p>
+                            <p class="text-muted"></p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 circuits-item">
@@ -224,7 +225,7 @@ if(isset($_POST['forminscription']))
                         </a>
                         <div class="circuits-caption">
                             <h4>Bretagne sud</h4>
-                            <p class="text-muted">3000.00 €</p>
+                            <p class="text-muted"></p>
                         </div>
                     </div>
                 </div>
@@ -291,7 +292,7 @@ if(isset($_POST['forminscription']))
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contactez Nous</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Nous vous répondrons le plus rapidement possible !</h3>
                 </div>
             </div>
             <div class="row">

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=ydays_membre', 'root', '');
+require('connection.php');
 
 if(isset($_SESSION['id']))
 {
@@ -59,6 +59,14 @@ if(isset($_SESSION['id']))
                             $newnom = htmlspecialchars($_POST['newnom']);
                             $insertnom = $bdd->prepare("UPDATE membres SET nom = ? WHERE id = ?");
                             $insertnom->execute(array($newnom, $_SESSION['id']));
+                            $erreur = "Votre compte a bien été modifié";
+                        }
+
+                        if(isset($_POST['news_letter']) and !empty($_POST['news_letter']))
+                        {
+                            $news_letter = htmlspecialchars($_POST['news_letter']);
+                            $insertnews_letter = $bdd->prepare("UPDATE membres SET news_letter = ? WHERE id = ?");
+                            $insertnews_letter->execute(array($news_letter, $_SESSION['id']));
                             $erreur = "Votre compte a bien été modifié";
                         }
                       }
@@ -158,7 +166,7 @@ if(isset($_SESSION['id']))
 
                               ?>
                               <li><a href="edit_profil.php?id=<?php echo $_SESSION['id'] ?>">Aperçu de mon compte</a></li>
-                              <li><a href="#">Mes commandes</a></li>
+                              <li><a href="mes_commandes.php?id=<?php echo $_SESSION['id'] ?>">Mes commandes</a></li>
                               <li role="separator" class="divider"></li>
                               <li><a href="deconnexion.php">Deconnexion</a></li>
                               <?php } else { ?>
@@ -207,12 +215,21 @@ if(isset($_SESSION['id']))
                   <input type="password" class="form-control" id="password" name="newmdp" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
                   <p class="help-block text-danger"></p>
               </div>
-
               <div class="form-group">
                 <label for="">Confirmation de mot de passe*</label>
                 <input type="password" class="form-control" id="password" name="newmdp2" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
                 <p class="help-block text-danger"></p>
               </div>
+
+              <div class="form-group">
+              <label for="mon_id">Recevoir notre news letter ?</label>
+              <br>
+              <input type="radio" name="news_letter" value="oui" checked > <label for="mon_id">Oui </label>
+              <br>
+              <input type="radio" name="news_letter" value="non" > <label for="mon_id">Non </label>
+              <p class="help-block text-danger"></p>
+              </div>
+
               <div class="clearfix"></div>
               <div class="row bouton">
                 <div id="success"></div>

@@ -1,6 +1,6 @@
 <?php
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=ydays_membre', 'root', '');
+require('connection.php');
 
 if(isset($_POST['forminscription']))
 {
@@ -8,49 +8,57 @@ if(isset($_POST['forminscription']))
     $prenom = htmlspecialchars($_POST['prenom']);
     $nom = htmlspecialchars($_POST['nom']);
     $mail = htmlspecialchars($_POST['mail']);
+    $news_letter = htmlspecialchars($_POST['news_letter']);
+    $conditions = htmlspecialchars($_POST['conditions']);
     $mdp = sha1($_POST['mdp']);
     $mdp2 = sha1($_POST['mdp2']);
 
     if(!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2']))
     {
-
-        $prenomlenght = strlen($prenom);
-        if($prenomlenght <= 255)
+        if($conditions == "oui")
         {
-            if(filter_var($mail, FILTER_VALIDATE_EMAIL))
-            {
+          $prenomlenght = strlen($prenom);
+          if($prenomlenght <= 255)
+          {
+              if(filter_var($mail, FILTER_VALIDATE_EMAIL))
+              {
 
-                $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
-                $reqmail->execute(array($mail));
-                $mailexist = $reqmail->rowCount();
+                  $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
+                  $reqmail->execute(array($mail));
+                  $mailexist = $reqmail->rowCount();
 
-                if($mailexist==0)
-                {
-                    if($mdp == $mdp2)
-                    {
-                        $insertmembre = $bdd->prepare("INSERT INTO membres (prenom, nom, mdp, mail) VALUES (?, ?, ?, ?)");
-                        $insertmembre->execute(array($prenom, $nom, $mdp, $mail));
-                        $erreur = "Votre compte a bien été crée ! Merci de vous connecter.";
-                    }
-                    else
-                    {
-                        $erreur ="Vos mots de passe sont différents !";
-                    }
-                }
-                else
-                {
-                    $erreur ="Cette adresse mail est déjà enregistrée !";
-                }
-            }
-            else
-            {
-                $erreur = "Votre adresse mail n'est pas valide";
-            }
-        }
-        else
-        {
-            $erreur = "Votre prenom est trop long !";
-        }
+                  if($mailexist==0)
+                  {
+                      if($mdp == $mdp2)
+                      {
+                          $insertmembre = $bdd->prepare("INSERT INTO membres (prenom, nom, mdp, mail, news_letter) VALUES (?, ?, ?, ?, ?)");
+                          $insertmembre->execute(array($prenom, $nom, $mdp, $mail, $news_letter));
+                          $erreur = "Votre compte a bien été crée ! Merci de vous connecter.";
+                      }
+                      else
+                      {
+                          $erreur ="Vos mots de passe sont différents !";
+                      }
+                  }
+                  else
+                  {
+                      $erreur ="Cette adresse mail est déjà enregistrée !";
+                  }
+              }
+              else
+              {
+                  $erreur = "Votre adresse mail n'est pas valide";
+              }
+          }
+          else
+          {
+              $erreur = "Votre prenom est trop long !";
+          }
+       }
+       else
+       {
+         $erreur = "Vous devez accépter nos conditions générales d'utilisation.";
+       }
     }
     else
     {
@@ -184,6 +192,21 @@ if(isset($_POST['forminscription']))
                     <input type="password" class="form-control" id="password" name="mdp2" required data-validation-required-message="S'il vous plaît entrez votre mot de passe.">
                     <p class="help-block text-danger"></p>
                 </div>
+
+                <label for="mon_id">Recevoir notre news letter ?</label>
+                <br>
+                <input type="radio" name="news_letter" value="oui" checked > <label for="mon_id">Oui </label>
+                <br>
+                <input type="radio" name="news_letter" value="non" > <label for="mon_id">Non </label>
+                <p class="help-block text-danger"></p>
+
+                <label for="mon_id">En vous inscrivant, vous accépter nos conditions d'utilisations générales.</label>
+                <br>
+                <input type="radio" name="conditions" value="oui" checked > <label for="mon_id">Oui </label>
+                <br>
+                <input type="radio" name="conditions" value="non" > <label for="mon_id">Non </label>
+                <p class="help-block text-danger"></p>
+
                 <div id="success"></div>
                 <div class="row">
                     <button type="submit" name="forminscription" class="button col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">Inscription</button>

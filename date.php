@@ -6,7 +6,7 @@ class Date{
 
     function getNom($year){
         global $DB;
-        $req = $DB->query('SELECT id,nom,date FROM bretagne_nord_reservation WHERE YEAR(date)='.$year);
+        $req = $DB->query('SELECT id,nom,date FROM reservations WHERE YEAR(date)='.$year);
         $nom = array();
         while ($d  = $req->fetch(PDO::FETCH_OBJ))
         {
@@ -17,7 +17,7 @@ class Date{
 
     function getVerif_unique($year){
         global $DB;
-        $req = $DB->query('SELECT id,verif_unique,date FROM bretagne_nord_reservation WHERE YEAR(date)='.$year);
+        $req = $DB->query('SELECT id,verif_unique,date FROM reservations WHERE YEAR(date)='.$year);
         $verif_unique = array();
         while ($d  = $req->fetch(PDO::FETCH_OBJ))
         {
@@ -28,7 +28,7 @@ class Date{
 
     function getNb_personne($year){
         global $DB;
-        $req = $DB->query('SELECT id,nb_personne,date FROM bretagne_nord_reservation WHERE YEAR(date)='.$year);
+        $req = $DB->query('SELECT id,nb_personne,date FROM reservations WHERE YEAR(date)='.$year);
         $nb_personne = array();
         while ($d  = $req->fetch(PDO::FETCH_OBJ))
         {

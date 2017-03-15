@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=ydays_membre', 'root', '');
+require('connection.php');
 
 if(isset($_POST['formconnexion']))
 {
