@@ -139,7 +139,7 @@ if(isset($_POST['formconnexion']))
         $mail->execute(array($_SESSION['id']));
         $mail = $mail->fetch();
 
-        $reservation_bretagne_nord = $bdd->query("SELECT * FROM bretagne_nord_reservation");
+        $reservation_bretagne_nord = $bdd->query("SELECT * FROM reservations");
         ?>
 
         <div class="row">
