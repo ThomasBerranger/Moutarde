@@ -295,6 +295,8 @@ if(isset($_SESSION['id']))
                             </h1>
                         </div><!-- /.page-header -->
 
+                        <h2>Bienvenue dans l'acceuil des administrateurs, sur votre gauche vous trouverez toutes les fonctions vous permettant d'administrer le site Frenchmotortrip.</h2>
+
                     </div><!-- /.page-content -->
                 </div>
             </div><!-- /.main-content -->

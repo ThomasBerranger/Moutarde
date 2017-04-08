@@ -1,0 +1,55 @@
+.navbar-custom .nav li a {
+    color:black;
+}
+
+.navbar-custom {
+    background-color: #eeeeee;
+    border-color: transparent;
+    padding: 0px;
+}
+
+.navbar .dropdown ul{
+    background-color: #eeeeee;
+}
+.navbar-custom .navbar-brand {
+    color: #fed136;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #fed136;
+    background-color: #eeeeee;
+}
+
+#myCarousel{
+    margin: 5vh auto;
+}
+
+.separate {
+    width: 20vw;
+    margin: 75px auto;
+    border-bottom: 1px solid #A9A9A9;
+}
+
+h2{
+  margin-bottom: 15px;
+  font-size: 3em;
+  font-weight: 1000;
+  font-family: "Montserrat";
+}
+
+h4{
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.text-muted{
+  color: #777777;
+}
+
+p{
+  font-size: 14px;
+  text-align: center;
+
+}
