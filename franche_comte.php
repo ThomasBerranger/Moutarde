@@ -119,8 +119,8 @@
                                 </ol>
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
-                                    <div class="item active"> <img src="./img/Franche-comte/pa.jpg" alt="Bretagne du nord" class="image-responsive"> </div>
-                                    <div class="item"> <img src="./img/Franche-comte/pa2.jpg" alt="bretagne du nord" class="image-responsive"> </div>
+                                    <div class="item active"> <img src="./img/Franche-comte/pa.jpg" alt="Franche comte" class="image-responsive"> </div>
+                                    <div class="item"> <img src="./img/Franche-comte/pa2.jpg" alt="Franhe comte" class="image-responsive"> </div>
                                 </div>
                             </div>
                             <div class="timeline-heading">
@@ -131,17 +131,17 @@
                             <div class="separate"></div>
                             <ul class="timeline">
                                 <li class="timeline-inverted">
-                                    <div class="timeline-image"> <img class="img-circle img-responsive" src="img/moto.jpeg" alt=""> </div>
+                                    <div class="timeline-image"> <img class="img-circle img-responsive" src="img/harley2.jpg" alt="Harley"> </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="subheading">Quelle moto ?</h4> </div>
                                         <div class="timeline-body">
-                                            <p class="text-muted">Pour votre parcours nous vous proposons une Suzuki 650 V-STROM ABS (645m3) ou une Ducati Scrambler Classic ABS (803m3) au choix.</p>
+                                            <p class="text-muted">Pour votre parcours nous vous proposons une Harley Davidson Touring Road King.</p>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/resto.jpg" alt=""> </div>
+                                    <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/resto.jpg" alt="Restaurant"> </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
                                             <h4 class="subheading">Restaurant</h4> </div>
@@ -151,7 +151,7 @@
                                     </div>
                                 </li>
                                 <li class="timeline-inverted">
-                                    <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/carte.png" alt=""> </div>
+                                    <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/carte.png" alt="Carte"> </div>
                                     <div class="timeline-panel parcours">
                                         <div class="timeline-heading">
                                             <h4 class="subheading">Quel parcours ?</h4> </div>

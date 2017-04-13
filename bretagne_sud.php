@@ -131,32 +131,32 @@
                                         <div class="separate"></div>
                                         <ul class="timeline">
                                             <li class="timeline-inverted">
-                                                <div class="timeline-image"> <img class="img-circle img-responsive" src="img/moto.jpeg" alt=""> </div>
+                                                <div class="timeline-image"> <img class="img-circle img-responsive" src="img/harley.jpg" alt="Harley Davidson"> </div>
                                                 <div class="timeline-panel">
                                                     <div class="timeline-heading">
                                                         <h4 class="subheading">Quelle moto ?</h4> </div>
-                                                    <div class="timeline-body">
-                                                        <p class="text-muted">Pour votre parcours nous vous proposons une Suzuki 650 V-STROM ABS (645m3) ou une Ducati Scrambler Classic ABS (803m3) au choix.</p>
-                                                    </div>
+                                                        <div class="timeline-body">
+                                                            <p class="text-muted">Pour votre parcours nous vous proposons une Harley Davidson 1200 Sportser XL Custom.</p>
+                                                        </div>
                                                 </div>
                                             </li>
                                             <li>
-                                                <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/resto.jpg" alt=""> </div>
+                                                <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/resto.jpg" alt="Restaurant"> </div>
                                                 <div class="timeline-panel">
                                                     <div class="timeline-heading">
                                                         <h4 class="subheading">Restaurant</h4> </div>
-                                                    <div class="timeline-body">
-                                                        <p class="text-muted">Chez les Bretons , la cuisine est une affaire de famille à laquelle on tient de génération en génération. La Bretagne est une étape gastronomique majeure du paysage français. Pour les fins gourmets comme pour les amateurs, une cuisine inventive, originale, ludique, poétique et pleine de saveurs attend les habitués comme les connaisseurs de passage</p>
-                                                    </div>
+                                                        <div class="timeline-body">
+                                                          <p class="text-muted">Chez les Bretons , la cuisine est une affaire de famille à laquelle on tient de génération en génération. La Bretagne est une étape gastronomique majeure du paysage français. Pour les fins gourmets comme pour les amateurs, une cuisine inventive, originale, ludique, poétique et pleine de saveurs attend les habitués comme les connaisseurs de passage</p>
+                                                        </div>
                                                 </div>
                                             </li>
                                             <li class="timeline-inverted">
-                                                <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/carte.png" alt=""> </div>
+                                                <div class="timeline-image"> <img class="img-circle img-responsive" src="img/bretagnesud/parc.png" alt="Carte de bretagne du sud"> </div>
                                                 <div class="timeline-panel parcours">
                                                     <div class="timeline-heading">
                                                         <h4 class="subheading">Quel parcours ?</h4> </div>
                                                     <div class="timeline-body">
-                                                        <p class="text-muted">Lorem ipsum dolor</p>
+                                                        <p class="text-muted">Vous découvrez les côtes de la bretagne du sud et ridez à travers les plus beaux villages de France. Les routes variées de cet itinéraire moto France vous emmènent au cœur de régions de charme comme la Bretagne. Vous découvrez de superbes monuments historiques comme la cathédrale de Quimper ou le village de Rochefort-en-Terre. Votre voyage à moto en France vous permet de profiter pleinement des joyaux culinaires. Vivez un voyage de charme en France à moto pour redécouvrir les trésors de l’histoire française.</p>
                                                     </div>
                                                 </div>
                                             </li>

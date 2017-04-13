@@ -20,7 +20,7 @@ if(isset($_SESSION['id']))
  	<head>
  		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
  		<meta charset="utf-8" />
- 		<title>Gallery - Ace Admin</title>
+ 		<title>Galerie</title>
 
  		<meta name="description" content="responsive photo gallery using colorbox" />
  		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -325,16 +325,16 @@ if(isset($_SESSION['id']))
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="img/bretagnenord.jpg" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="img/bretagnenord.jpg" alt="Bretagne du nord"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="./img/bretagnenord/pa5.jpg" alt="Bretagne du nord"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="./img/bretagnenord/pa4.jpg" alt="Bretagne du nord"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="img/harley.jpg" alt="Harley"> </a>
             </div>
         </div>
         <hr>
@@ -347,16 +347,16 @@ if(isset($_SESSION['id']))
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="img/bretagnesud.jpg" alt=""> </a>
+                <a href="#"> <img class="img-responsive"  src="img/franchecomte.jpg"  alt="Franche comte"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="./img/Franche-comte/pa2.jpg" alt="Franche comte"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="./img/Franche-comte/pa.jpg" alt="Franche comte"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="img/harley2.jpg" alt="Harley"> </a>
             </div>
         </div>
         <!-- /.row -->
@@ -370,16 +370,16 @@ if(isset($_SESSION['id']))
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="img/franchecomte.jpg" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="img/bretagnesud.jpg" alt="Bretagne du sud"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="./img/bretagnesud/bresud.jpg" alt="Bretagne du sud"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="./img/bretagnesud/bresud2.jpg" alt="bretagne sud" alt="Bretagne du sud"> </a>
             </div>
             <div class="col-md-3 portfolio-item">
-                <a href="#"> <img class="img-responsive" src="http://placehold.it/750x450" alt=""> </a>
+                <a href="#"> <img class="img-responsive" src="img/harley.jpg" alt="harley"> </a>
             </div>
         </div>
         <!-- /.row -->
@@ -399,8 +399,8 @@ if(isset($_SESSION['id']))
  				<div class="footer-inner">
  					<div class="footer-content">
  						<span class="bigger-120">
- 							<span class="blue bolder">Ace</span>
- 							Application &copy; 2013-2014
+ 							<span class="blue bolder">FrnchMotorTrip</span>
+ 							 &copy; 2017
  						</span>
 
  						&nbsp; &nbsp;

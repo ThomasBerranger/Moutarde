@@ -455,8 +455,8 @@ if(isset($_SESSION['id']))
  				<div class="footer-inner">
  					<div class="footer-content">
  						<span class="bigger-120">
- 							<span class="blue bolder">Ace</span>
- 							Application &copy; 2013-2014
+ 							<span class="blue bolder">FrenchMotorTrip</span>
+ 							 &copy; 2016-2017
  						</span>
 
  						&nbsp; &nbsp;

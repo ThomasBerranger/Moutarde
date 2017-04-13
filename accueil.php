@@ -257,7 +257,7 @@ if(isset($_SESSION['id']))
            							<b class="arrow fa fa-angle-down"></b>
            						</a>
 
-           						<b class="arrow"></b>
+                      <b class="arrow"></b>
            						<ul class="submenu">
            							<li class="">
            								<a href="index.php?id=<?php echo $_SESSION['id'] ?>">
@@ -265,6 +265,24 @@ if(isset($_SESSION['id']))
            									Index
            								</a>
            								<b class="arrow"></b>
+           							</li>
+                        <li class="">
+           								<a href="franche_comte.php?id=<?php echo $_SESSION['id'] ?>">
+           									<i class="menu-icon fa fa-caret-right"></i>
+           									Franche-Comte
+           								</a>
+           							</li>
+                        <li class="">
+           								<a href="bretagne_nord.php?id=<?php echo $_SESSION['id'] ?>">
+           									<i class="menu-icon fa fa-caret-right"></i>
+           									Bretagne du nord
+           								</a>
+           							</li>
+                        <li class="">
+           								<a href="bretagne_sud.php?id=<?php echo $_SESSION['id'] ?>">
+           									<i class="menu-icon fa fa-caret-right"></i>
+           									Bretagne du sud
+           								</a>
            							</li>
            						</ul>
           					</li>
@@ -305,8 +323,8 @@ if(isset($_SESSION['id']))
                 <div class="footer-inner">
                     <div class="footer-content">
                         <span class="bigger-120">
-                            <span class="blue bolder">Ace</span>
-                            Application &copy; 2013-2014
+                            <span class="blue bolder">FrenchMotorTrip</span>
+                             &copy; 2017
                         </span>
 
                         &nbsp; &nbsp;

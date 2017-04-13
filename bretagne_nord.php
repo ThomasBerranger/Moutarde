@@ -132,17 +132,17 @@
                                     <div class="separate"></div>
                                     <ul class="timeline">
                                         <li class="timeline-inverted">
-                                            <div class="timeline-image"> <img class="img-circle img-responsive" src="img/moto.jpeg" alt=""> </div>
+                                            <div class="timeline-image"> <img class="img-circle img-responsive" src="img/harley.jpg" alt="harley"> </div>
                                             <div class="timeline-panel">
                                                 <div class="timeline-heading">
                                                     <h4 class="subheading">Quelle moto ?</h4> </div>
                                                 <div class="timeline-body">
-                                                    <p class="text-muted">Pour votre parcours nous vous proposons une Suzuki 650 V-STROM ABS (645m3) ou une Ducati Scrambler Classic ABS (803m3) au choix.</p>
+                                                    <p class="text-muted">Pour votre parcours nous vous proposons une Harley Davidson 1200 Sportser XL Custom.</p>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/resto.jpg" alt=""> </div>
+                                            <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/resto.jpg" alt="restaurant"> </div>
                                             <div class="timeline-panel">
                                                 <div class="timeline-heading">
                                                     <h4 class="subheading">Restaurant</h4> </div>
@@ -152,13 +152,13 @@
                                             </div>
                                         </li>
                                         <li class="timeline-inverted">
-                                            <div class="timeline-image"> <img class="img-circle img-responsive" src="img/Franche-comte/carte.png" alt=""> </div>
+                                            <div class="timeline-image"> <img class="img-circle img-responsive" src="img/bretagnenord/ro1.png" alt="parcours"> </div>
                                             <div class="timeline-panel parcours">
                                                 <div class="timeline-heading">
                                                     <h4 class="subheading">Quel parcours ?</h4> </div>
-                                                <div class="timeline-body">
-                                                    <p class="text-muted"> Nous commencerons dans le Jura où nous pourrons contempler les cascades de la région. Puis nous finirons notre séjour dans le département des Haute-Saône connus pour ses superbes lacs. </p>
-                                                </div>
+                                                    <div class="timeline-body">
+                                                        <p class="text-muted"> Ce voyage entre nature et culture vous fait parcourir les hauts lieux de la bretagne du nord. Vous ridez hors des sentiers battus et goûtez au caractère indomptable de la région.  Découvrez une multitude de paysages en Bretagne à moto, des thalassos de Saint-Malo au Mont Saint-Michel en passant par les côtes de granit rose de Perros-Guirec jusqu’aux villes fortifiées de Bretagne. Ce circuit, confectionné avec soin, vous permet de savourer pleinement l’ambiance bretonne. Prenez également plaisir à découvrir les spécialités gastronomiques incontournables de cette région. </p>
+                                                    </div>
                                             </div>
                                         </li>
                                         <li class="timeline-inverted">
